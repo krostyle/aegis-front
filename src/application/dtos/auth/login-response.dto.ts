@@ -1,0 +1,3 @@
+type LoginResponseDTO = {
+  token: string;
+};

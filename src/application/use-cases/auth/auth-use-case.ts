@@ -3,12 +3,9 @@ import { AuthUseCaseInterface } from "./auth-use-case.interface";
 import { User } from "@/domain/entities/user.interface";
 
 export class AuthUseCase implements AuthUseCaseInterface {
-  constructor(
-    private readonly auth: AuthServiceInterface,
-    private readonly url: string
-  ) {}
-  login(email: string, password: string): Promise<User> {
-    return this.auth.login(email, password);
+  constructor(private readonly auth: AuthServiceInterface) {}
+  login(loginRequestDTO: LoginRequestDTO): Promise<LoginResponseDTO> {
+    return this.auth.login(loginRequestDTO);
   }
 
   logout(): Promise<void> {

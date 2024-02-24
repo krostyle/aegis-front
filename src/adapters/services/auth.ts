@@ -8,13 +8,13 @@ export class AuthService implements AuthServiceInterface {
     private readonly httpClient: HttpClientInterface,
     private readonly url: string
   ) {}
-  async login(email: string, password: string): Promise<User> {
+  async login(loginRequestDTO: LoginRequestDTO): Promise<LoginResponseDTO> {
     const response = await this.httpClient.request({
       url: this.url,
       method: HttpMethod.POST,
       body: {
-        email,
-        password,
+        email: loginRequestDTO.email,
+        password: loginRequestDTO.password,
       },
     });
     return response.body;

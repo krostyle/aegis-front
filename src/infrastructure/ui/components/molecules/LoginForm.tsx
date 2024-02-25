@@ -1,4 +1,6 @@
 import Button from "../atoms/Button";
+import EmailIcon from "../atoms/EmailIcon";
+import PasswordIcon from "../atoms/PasswordIcon";
 import TextInput from "../atoms/TextInput";
 
 const LoginForm: React.FC = () => {
@@ -6,6 +8,7 @@ const LoginForm: React.FC = () => {
     <form className="space-y-6">
       <TextInput
         label="Correo electrónico"
+        svg={<EmailIcon />}
         type="email"
         name="email"
         required
@@ -17,6 +20,7 @@ const LoginForm: React.FC = () => {
         name="password"
         required
         placeholder="••••••••"
+        svg={<PasswordIcon />}
       />
       <Button type="submit" variant="primary">
         Iniciar Sesión

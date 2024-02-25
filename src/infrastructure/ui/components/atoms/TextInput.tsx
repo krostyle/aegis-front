@@ -1,22 +1,22 @@
 import { InputHTMLAttributes } from "react";
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label: string;
+  label?: string;
+  svg?: React.ReactNode;
 }
 
 const TextInput: React.FC<TextInputProps> = ({
   label,
+  svg,
   ...props
 }: TextInputProps) => {
   return (
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2">
-        {label}
-      </label>
-      <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        {...props}
-      />{" "}
+      {label && <label className="label">{label}</label>}
+      <div className="input input-bordered flex items-center gap-2">
+        {svg}
+        <input className="grow" {...props} />
+      </div>
     </div>
   );
 };

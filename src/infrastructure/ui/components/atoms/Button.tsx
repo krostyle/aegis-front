@@ -9,11 +9,10 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   ...props
 }) => {
-  const baseStyle =
-    "text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline";
+  const baseStyle = "btn focus:outline-none focus:shadow-outline";
   const variantStyles = {
-    primary: "bg-blue-700 hover:bg-blue-800",
-    secondary: "bg-gray-500 hover:bg-gray-700",
+    primary: "btn-primary",
+    secondary: "btn-secondary",
   };
   const className = `${baseStyle} ${variantStyles[variant]}`;
 

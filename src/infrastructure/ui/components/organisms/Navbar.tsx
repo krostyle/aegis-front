@@ -47,6 +47,9 @@ const Navbar: React.FC = () => {
               <li>
                 <NavLink label="Contacto" href="/" />
               </li>
+              <li>
+                <NavLink label="Registrarse" href="/register" />
+              </li>
             </ul>
           </details>
         </div>

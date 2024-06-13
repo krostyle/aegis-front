@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html data-theme="light" lang="es">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-background min-h-screen`}>
         <Header />
         {children}
       </body>

@@ -12,19 +12,31 @@ import {
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-100 p-4 shadow-md">
+    <header className="bg-background p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-xl font-bold">Fraud Management</div>
+        <div className="text-backgorund text-2xl font-bold">
+          Fraud Management
+        </div>
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/">Home</NavigationMenuLink>
+              <NavigationMenuLink className="mx-4 hover:text-primary" href="/">
+                Home
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/login">Login</NavigationMenuLink>
+              <NavigationMenuLink
+                className="mx-4 hover:text-primary"
+                href="/login"
+              >
+                Login
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/register">
+              <NavigationMenuLink
+                className="mx-4 hover:text-primary"
+                href="/register"
+              >
                 Registrarse
               </NavigationMenuLink>
             </NavigationMenuItem>

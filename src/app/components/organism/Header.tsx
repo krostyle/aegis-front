@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                 className="mx-4 hover:text-primary"
                 href="/login"
               >
-                Login
+                Iniciar Sesión
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
